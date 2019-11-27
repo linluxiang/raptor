@@ -1,2 +1,2 @@
 # raptor
-The distributed actor framework for Rust
+A distributed actor framework for Rust
