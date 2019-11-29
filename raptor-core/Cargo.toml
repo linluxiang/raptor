@@ -1,5 +1,5 @@
 [package]
-name = "raptor"
+name = "raptor-core"
 version = "0.1.0"
 authors = ["Luxiang Lin <linluxiang@gmail.com>"]
 edition = "2018"

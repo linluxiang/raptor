@@ -1,6 +1,18 @@
+[package]
+name = "raptor"
+version = "0.1.0"
+authors = ["Luxiang Lin <linluxiang@gmail.com>"]
+edition = "2018"
+
+[lib]
+name = "raptor"
+path = "src/lib.rs"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 [workspace]
 members = [
-    "raptor",
+    ".",
+    "raptor-core",
     "raptor-macros"
     # Internal
 ]
