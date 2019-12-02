@@ -1,28 +1,26 @@
-pub(crate) trait Message {}
+// pub struct Context {}
 
-pub trait IGrain {}
-
-pub trait Grain {}
-
-pub(crate) struct GrainReference {
-    pub grain_id: String,
-}
-
-impl IGrain for GrainReference {}
-
-pub struct Context {}
-
-impl Context {
-    pub fn create_proxy<T: IGrain>(&self, grain_id: String) -> T {
-        GrainReference { grain_id } as T
-        /*
-         public TGrainInterface GetGrain<TGrainInterface>(Guid primaryKey, string grainClassNamePrefix = null) where TGrainInterface : IGrainWithGuidKey
-         {
-             Type interfaceType = typeof(TGrainInterface);
-             var implementation = this.GetGrainClassData(interfaceType, grainClassNamePrefix);
-             var grainId = GrainId.GetGrainId(implementation.GetTypeCode(interfaceType), primaryKey, null);
-             return this.Cast<TGrainInterface>(this.MakeGrainReferenceFromType(interfaceType, grainId));
-         }
-        */
-    }
-}
+// impl Context {
+//     fn get_proxy<T>(&self, grain_id: String, grain: &T) -> T
+//     where
+//     {
+//         let refg = GrainReference{grain_id};
+//         let result  = T::from_reference(&refg);
+//         result
+//     }
+//     // GrainType = T;
+//     // fn get_proxy<T>(&self, grain_id: String) -> T
+//     // where
+//     //     T: IGrain,
+//     // {
+//     //     /*
+//     //      public TGrainInterface GetGrain<TGrainInterface>(Guid primaryKey, string grainClassNamePrefix = null) where TGrainInterface : IGrainWithGuidKey
+//     //      {
+//     //          Type interfaceType = typeof(TGrainInterface);
+//     //          var implementation = this.GetGrainClassData(interfaceType, grainClassNamePrefix);
+//     //          var grainId = GrainId.GetGrainId(implementation.GetTypeCode(interfaceType), primaryKey, null);
+//     //          return this.Cast<TGrainInterface>(this.MakeGrainReferenceFromType(interfaceType, grainId));
+//     //      }
+//     //     */
+//     // }
+// }
