@@ -1,29 +1,6 @@
-[package]
-name = "raptor"
-version = "0.1.0"
-authors = ["Luxiang Lin <linluxiang@gmail.com>"]
-edition = "2018"
-
-[lib]
-name = "raptor"
-path = "src/lib.rs"
-
-[dependencies]
-raptor-core = { path = "./raptor-core" }
-async-trait = "0.1.19"
-serde = "1.0.103"
-# serde_traitobject = "0.2.4"
-erased-serde = "0.3.9"
-tokio = { version = "0.2.4", features = ["full"] }
-futures = "0.3"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 [workspace]
 members = [
-    ".",
-    "raptor-core",
-    "raptor-macros",
-    "raptor-rpc",
+    "raptor",
     # Internal
     "examples"
 ]
