@@ -23,6 +23,6 @@ members = [
     ".",
     "raptor-core",
     "raptor-macros",
-    "raptor-rpc"
+    "raptor-rpc",
     # Internal
 ]
