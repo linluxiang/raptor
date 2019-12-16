@@ -25,4 +25,5 @@ members = [
     "raptor-macros",
     "raptor-rpc",
     # Internal
+    "examples"
 ]
