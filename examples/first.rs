@@ -1,7 +1,7 @@
 use raptor::core::clustering::server;
+use std::error::Error;
 
 #[tokio::main]
-async fn main() -> Result<(), Box<dyn std::error::Error>> {
-    server::Server::default().start().await?;
-    Ok(())
+async fn main() -> Result<(), impl Error> {
+    server::Server::default().start().await
 }
